@@ -11,7 +11,7 @@ const { as: Tag, ...props } = Astro.props
 const a = ''
 
 const variantClasses: Record<string, string> = {
-  h1: 'text-3xl text-bold uppercase lg:"text-4xl'
+  h1: 'text-3xl text-bold uppercase lg:text-4xl'
 } as const
 
 type TVariantClasses = keyof typeof variantClasses
