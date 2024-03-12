@@ -1,0 +1,20 @@
+---
+import type { HTMLTag, Polymorphic } from 'astro/types'
+
+type Props<Tag extends HTMLTag> = Polymorphic<{
+  as: Tag
+  variant: TVariantClasses
+}>
+
+const { as: Tag, ...props } = Astro.props
+
+const a = ''
+
+const variantClasses: Record<string, string> = {
+  h1: 'text-3xl text-bold uppercase lg:"text-4xl'
+} as const
+
+type TVariantClasses = keyof typeof variantClasses
+---
+
+<Tag {...props}><slot /></Tag>
