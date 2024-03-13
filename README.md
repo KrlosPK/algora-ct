@@ -85,8 +85,6 @@ Feel free to check [issues page](https://github.com/KrlosPK/algora-ct/issues).
 
 Give us a ⭐️ if you liked this project!
 
-> Astro
-
 ## 🛠️ Stack
 
 - [![Astro][astro-badge]][astro-url] - The web framework for content-driven websites.
