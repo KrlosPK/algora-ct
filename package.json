@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "husky",
-    "test": "eslint --ext .astro,.ts,.js,.tsx ."
+    "lint": "eslint --ext .astro,.ts,.js,.tsx ."
   },
   "dependencies": {
     "@astrojs/check": "^0.5.8",
