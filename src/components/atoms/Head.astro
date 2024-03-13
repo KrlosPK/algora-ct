@@ -1,0 +1,36 @@
+---
+interface Props {
+  faviconUrl: string
+  title: string
+}
+
+const { faviconUrl, title } = Astro.props
+---
+
+<meta charset="utf-8" />
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href={faviconUrl}
+/>
+<meta
+  name="viewport"
+  content="width=device-width"
+/>
+<meta
+  name="description"
+  content="App de mensajería en línea con amigos o desconocidos"
+/>
+<meta
+  name="author"
+  content="ConanGH-S, KrlosPK, ST-Benji"
+/>
+<meta
+  name="keywords"
+  content="Real time chat, mensajería, messages, real time"
+/>
+<meta
+  name="generator"
+  content={Astro.generator}
+/>
+<title>{title}</title>
