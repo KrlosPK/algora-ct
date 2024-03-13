@@ -1,22 +1,17 @@
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/favicon.svg"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <title>Algora-ct</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+---
+import Typography from '@/components/atoms/Typography.astro'
+import Layout from '@/layouts/Layout.astro'
+---
+
+<Layout
+  title="Algora-ct"
+  faviconUrl="/favicon.svg"
+  language="es"
+>
+  <Typography
+    color="black"
+    variant="h1"
+    as="h1"
+    >AlgoraCt</Typography
+  >
+</Layout>
