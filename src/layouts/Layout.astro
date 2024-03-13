@@ -1,4 +1,6 @@
 ---
+import MetaData from '@/components/atoms/MetaData.astro'
+
 type Languages = 'es' | 'en'
 
 interface Props {
@@ -12,21 +14,10 @@ const { title, language, faviconUrl } = Astro.props
 
 <html lang={language}>
   <head>
-    <meta charset="utf-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href={faviconUrl}
+    <MetaData
+      faviconUrl={faviconUrl}
+      title={title}
     />
-    <meta
-      name="viewport"
-      content="width=device-width"
-    />
-    <meta
-      name="generator"
-      content={Astro.generator}
-    />
-    <title>{title}</title>
   </head>
   <body>
     <slot />
