@@ -1,6 +1,31 @@
 ---
 import Typography from '@/components/atoms/Typography.astro'
+import Navbar, { type TNavLinks } from '@/components/organism/Navbar.astro'
+import Hero from '@/components/sections/Hero.astro'
 import Layout from '@/layouts/Layout.astro'
+
+const navSections: TNavLinks[] = [
+  {
+    link: '/',
+    name: 'Inicio'
+  },
+  {
+    link: '/',
+    name: 'Novedades'
+  },
+  {
+    link: '/',
+    name: 'Contáctanos'
+  },
+  {
+    link: '/',
+    name: 'Regístrate'
+  },
+  {
+    link: '/',
+    name: 'Inicia sesión'
+  }
+]
 ---
 
 <Layout
@@ -8,10 +33,19 @@ import Layout from '@/layouts/Layout.astro'
   faviconUrl="/favicon.svg"
   language="es"
 >
-  <Typography
-    color="black"
-    variant="h1"
-    as="h1"
-    >AlgoraCt</Typography
+  <section
+    class="container mx-auto grid h-screen grid-flow-row grid-rows-[auto_1fr] px-4 py-16"
   >
+    <header class="grid place-content-center gap-3">
+      <Typography
+        as="h1"
+        variant="subtitle"
+        color="primary"
+        class="text-center"
+        >Algora-ct</Typography
+      >
+      <Navbar navLinks={navSections} />
+    </header>
+    <Hero />
+  </section>
 </Layout>
