@@ -6,7 +6,7 @@ export default {
 			colors: {
 				primary: 'var(--primary-color)',
 				secondary: 'var(--secondary-color)',
-				base: 'var(--base-color)',
+				'base-primary': 'var(--base-color)',
 				foreground: 'var(--foreground-color)'
 			}
 		},
