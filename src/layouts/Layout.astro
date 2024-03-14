@@ -21,5 +21,13 @@ const { title, language, faviconUrl } = Astro.props
   </head>
   <body>
     <slot />
+    <style is:global>
+      :root {
+        --primary-color: #00b3cd;
+        --secondary-color: #004c6f;
+        --base-color: #fff;
+        --foreground-color: #191919;
+      }
+    </style>
   </body>
 </html>
