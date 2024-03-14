@@ -1,0 +1,38 @@
+---
+import Action from '../atoms/Action.astro'
+import Typography from '../atoms/Typography.astro'
+
+export interface TNavLinks {
+  name: string
+  link: string
+}
+
+interface Props {
+  navLinks: TNavLinks[]
+}
+
+const { navLinks } = Astro.props
+---
+
+<nav>
+  <ul class="hidden gap-3 sm:flex">
+    {
+      navLinks.map(({ link, name }) => (
+        <li>
+          <Typography
+            as="span"
+            color="light"
+            variant="base-normal"
+          >
+            <Action
+              as="a"
+              href={link}
+            >
+              {name}
+            </Action>
+          </Typography>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
