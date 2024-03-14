@@ -6,5 +6,6 @@
     "typescript", // Enable .ts
     "typescriptreact" // Enable .tsx
   ],
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
