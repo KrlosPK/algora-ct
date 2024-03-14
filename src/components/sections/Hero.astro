@@ -1,0 +1,30 @@
+---
+import Card from '@/components/organism/Card.astro'
+import Typography from '../atoms/Typography.astro'
+import Action from '../atoms/Action.astro'
+---
+
+<Card class="mx-auto flex flex-col gap-8 self-center rounded-none shadow-none">
+  <Typography
+    as="h1"
+    color="primary"
+    variant="h1"
+    class="mx-auto max-w-[20ch] text-center leading-normal"
+  >
+    Explora el chat integrado con AI
+  </Typography>
+  <Typography
+    as="h3"
+    color="ultra-light"
+    variant="base-normal"
+    class="mx-auto max-w-[45ch] text-center"
+  >
+    Conversaciones más inteligentes. Experiencias más humanas.
+  </Typography>
+  <Action
+    as="button"
+    class="mx-auto max-w-32 rounded-3xl"
+  >
+    Comienza
+  </Action>
+</Card>

@@ -12,14 +12,18 @@ const { as: Tag, variant, color, class: className, ...props } = Astro.props
 type TVariantClasses = keyof typeof variantClasses
 
 const variantClasses = {
-  h1: 'text-3xl font-bold uppercase lg:text-4xl'
+  'h1': 'text-4xl font-bold uppercase lg:text-5xl line',
+  'base-normal': 'font-normal text-base',
+  'subtitle': 'text-2xl font-semibold capitalize'
 } as const
 
 const colorClasses = {
-  white: 'text-white',
-  black: 'text-black',
-  primary: 'text-primary',
-  neutral: 'text-neutral-300'
+  'white': 'text-white',
+  'black': 'text-black',
+  'primary': 'text-primary',
+  'neutral': 'text-foreground',
+  'light': 'text-gray-700',
+  'ultra-light': 'text-gray-500'
 } as const
 
 type TColorClasses = keyof typeof colorClasses
