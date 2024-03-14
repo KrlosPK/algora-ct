@@ -1,0 +1,18 @@
+---
+import type { HTMLTag, Polymorphic } from 'astro/types'
+
+type HTMLActionTag = 'button' | 'a'
+
+type Props<Tag extends HTMLActionTag & HTMLTag> = Polymorphic<{
+  as: Tag
+  href?: string
+}>
+
+const { as: Tag, class: className, ...props } = Astro.props
+---
+
+<Tag
+  class:list={className}
+  {...props}
+  ><slot /></Tag
+>
