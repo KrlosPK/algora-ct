@@ -1,0 +1,16 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+type Props = HTMLAttributes<'article'>
+
+const { class: className, ...props } = Astro.props
+
+const cardClasses = ['max-w-lg rounded-lg shadow-lg', className]
+---
+
+<article
+  class:list={cardClasses}
+  {...props}
+>
+  <slot />
+</article>

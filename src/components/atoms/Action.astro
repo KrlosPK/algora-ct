@@ -9,10 +9,15 @@ type Props<Tag extends HTMLActionTag & HTMLTag> = Polymorphic<{
 }>
 
 const { as: Tag, class: className, ...props } = Astro.props
+
+const ActionDefaultClasses =
+  'rounded-lg shadow w-full text-white bg-primary py-2'
+
+const ActionClasses = [Tag === 'button' && ActionDefaultClasses, className]
 ---
 
 <Tag
-  class:list={className}
+  class:list={ActionClasses}
   {...props}
   ><slot /></Tag
 >
