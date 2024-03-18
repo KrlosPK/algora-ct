@@ -1,10 +1,12 @@
 ---
+import type { Code } from 'astro:components'
 import Action from '../atoms/Action.astro'
 import Typography from '../atoms/Typography.astro'
 
 export interface TNavLinks {
   name: string
   link: string
+  buttonStyle?: boolean
 }
 
 interface Props {
@@ -12,21 +14,26 @@ interface Props {
 }
 
 const { navLinks } = Astro.props
+
+const userButtonStyles =
+  'text-black font-medium border border-gray-300 py-2 px-2 rounded-3xl hover:text-primary hover:border-primary transition'
 ---
 
 <nav>
-  <ul class="hidden gap-3 sm:flex">
+  <ul class="hidden gap-4 sm:flex">
     {
-      navLinks.map(({ link, name }) => (
-        <li>
+      navLinks.map(({ link, name, buttonStyle }) => (
+        <li class="flex h-12 items-center">
           <Typography
             as="span"
-            color="light"
+            color="ultra-light"
             variant="base-normal"
+            class="transition hover:text-primary hover:brightness-75"
           >
             <Action
               as="a"
               href={link}
+              class:list={[buttonStyle === true && userButtonStyles]}
             >
               {name}
             </Action>
