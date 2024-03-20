@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro'
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, redirect }) => {
   const data = await request.formData()
   const username = data.get('username')
   const password = data.get('password')
@@ -12,10 +12,5 @@ export const POST: APIRoute = async ({ request }) => {
       { status: 400 }
     )
   }
-  return new Response(
-    JSON.stringify({
-      message: 'Success!'
-    }),
-    { status: 200 }
-  )
+  return redirect('/', 307)
 }
