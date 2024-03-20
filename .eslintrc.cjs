@@ -8,6 +8,15 @@ module.exports = {
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.astro']
       }
+    },
+    {
+      files: ['*.ts'],
+      parser: '@typescript-eslint/parser',
+      plugins: ['@typescript-eslint'],
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended'
+      ]
     }
   ]
 }
