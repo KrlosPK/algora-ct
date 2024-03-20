@@ -4,10 +4,10 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: 'var(--primary-color)',
-				secondary: 'var(--secondary-color)',
-				'base-primary': 'var(--base-color)',
-				foreground: 'var(--foreground-color)'
+				primary: '#00b3cd',
+				secondary: '#00799c',
+				'base-primary': '#fff',
+				foreground: '#191919'
 			}
 		},
 	},

@@ -1,4 +1,5 @@
 ---
+import './globals.css'
 import MetaData from '@/components/atoms/MetaData.astro'
 
 type Languages = 'es' | 'en'
@@ -21,13 +22,5 @@ const { title, language, faviconUrl } = Astro.props
   </head>
   <body>
     <slot />
-    <style is:global>
-      :root {
-        --primary-color: #00b3cd;
-        --secondary-color: #00799c;
-        --base-color: #fff;
-        --foreground-color: #191919;
-      }
-    </style>
   </body>
 </html>
