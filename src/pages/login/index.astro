@@ -1,0 +1,63 @@
+---
+import Action from '@/components/atoms/Action.astro'
+import Typography from '@/components/atoms/Typography.astro'
+import Card from '@/components/organism/Card.astro'
+import Form from '@/components/organism/Form.svelte'
+---
+
+<section class="grid h-screen place-items-center bg-slate-300">
+  <Form client:load>
+    <Card class="grid grid-rows-2 gap-8 bg-white p-6">
+      <label
+        for="username"
+        class="flex flex-col gap-2"
+      >
+        <Typography
+          as="span"
+          color="black"
+          variant="base-normal"
+        >
+          Nombre de usuario
+        </Typography>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          autocomplete="username"
+          aria-label="Entrada del nombre de usuario"
+          class="w-72 rounded-lg border border-black px-3 py-1"
+          placeholder="Evan you"
+          required
+        />
+      </label>
+      <label
+        for="password"
+        class="flex flex-col gap-2"
+      >
+        <Typography
+          as="span"
+          color="black"
+          variant="base-normal"
+        >
+          Contrasena
+        </Typography>
+        <input
+          type="text"
+          name="password"
+          id="password"
+          autocomplete="current-password"
+          aria-label="Entrada de la contraseña actual"
+          class="w-72 rounded-lg border border-black px-3 py-1"
+          placeholder="************"
+          required
+        />
+      </label>
+      <Action
+        as="button"
+        aria-label="Botón de envío del formulario"
+      >
+        Enviar
+      </Action>
+    </Card>
+  </Form>
+</section>
